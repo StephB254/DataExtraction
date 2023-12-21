@@ -57,7 +57,7 @@ with open(filenamed, 'r') as file:
             with open(csv_filename, mode, newline='') as file:
                 writer = csv.writer(file)
                 if mode == 'w':
-                    writer.writerow(['ID','CREATED_AT_MX','UPDATED_AT_MX','CUSTOMER_USER_ID','ACCOUNT_NUMBER','AMOUNT','AMOUNT_CURRENCY_CODE','HANDLER_REFERENCE','THIRD_PARTY_TRANSIENT_REFERENCE','THIRD_PARTY_FINAL_REFERENCE','THIRD_PARTY_NAME_CODE','THIRD_PARTY_OUTLET','THIRD_PARTY_STATUS','THIRD_PARTY_TRANSACTION_START_DATE_MX','THIRD_PARTY_TRANSACTION_COMPLETION_DATE_MX','PAYMENT_TYPE','INTENT_ID','PRODUCT','PRODUCT_ITEM_ID','STATUS','SOURCE_REFERENCE_ID','TRANSACTION_COMPLETION_DATE_MX'])  # Write header if creating a new file
+                    writer.writerow(header)
                     writer.writerow(csv_entry)
                 elif mode == 'a':
                     writer.writerow(csv_entry)
